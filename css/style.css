@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 2.5em 0em 2.5em 0em;
+  text-align: center;
+  font-size: 3.5rem;
+}
+header p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.pads {
+  background: lightblue;
+  width: 100%;
+  display: flex;
+}
+.pads > div {
+  padding-top: 1em;
+  height: 20vh;
+  width: 5vh;
+  flex: 1;
+}
+
+.pads > div > p {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 0.5em;
+}
+
+.pads > div:active {
+  opacity: 0.5;
+}
+
+.pad1 {
+  background: #60d394;
+}
+.pad2 {
+  background: #d36060;
+}
+.pad3 {
+  background: #c060d3;
+}
+.pad4 {
+  background: #d3d160;
+}
+.pad5 {
+  background: #606bd3;
+}
+.pad6 {
+  background: #60c2d3;
+}
+.pad7 {
+  background: #65b644;
+}
+.pad8 {
+  background: #3c2e8b;
+}
+.pad9 {
+  background: #a02d25;
+}
+
+.highlight {
+  opacity: 0.5;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.visual > div {
+  position: absolute;
+  bottom: 0%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transform: scale(1);
+  z-index: -1;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+  }
+
+  100% {
+    bottom: 00%;
+    left: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .pads > div > p {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    transform: rotate(90deg);
+  }
+  .letter {
+    visibility: hidden;
+  }
+}
